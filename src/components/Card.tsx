@@ -1,16 +1,16 @@
 import { FC } from "react";
 import clsx from "clsx";
 
-interface GlassPaneProps {
+interface CardProps {
   children: any;
   className: any;
 }
 
-const GlassPane: FC<GlassPaneProps> = ({ children, className }) => {
+const Card: FC<CardProps> = ({ className, children }) => {
   return (
     <div
       className={clsx(
-        "glass rounded-2xl border-solid border-2 border-gray-200",
+        "rounded-3xl px-10 py-4 drop-shadow-xl bg-white",
         className
       )}
     >
@@ -19,4 +19,4 @@ const GlassPane: FC<GlassPaneProps> = ({ children, className }) => {
   );
 };
 
-export default GlassPane;
+export default Card;

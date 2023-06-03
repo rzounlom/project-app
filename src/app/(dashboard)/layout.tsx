@@ -6,7 +6,7 @@ import { Inter } from "@next/font/google";
 // import Sidebar from "@/components/Sidebar";
 import clsx from "clsx";
 
-interface Props {
+interface DashboardRootLayoutProps {
   children: any;
 }
 
@@ -15,7 +15,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const DashboardRootLayout: FC<Props> = ({ children }) => {
+const DashboardRootLayout: FC<DashboardRootLayoutProps> = ({ children }) => {
   return (
     <html lang="en" className={clsx(inter.variable, "dark")}>
       <head />

@@ -4,7 +4,7 @@ import { FC } from "react";
 import GlassPane from "@/components/GlassPane";
 import { Inter } from "@next/font/google";
 
-interface Props {
+interface AuthRootLayoutProps {
   children: any;
 }
 
@@ -13,7 +13,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const AuthRootLayout: FC<Props> = ({ children }) => {
+const AuthRootLayout: FC<AuthRootLayoutProps> = ({ children }) => {
   return (
     <html lang="en" className={inter.variable}>
       <head />
