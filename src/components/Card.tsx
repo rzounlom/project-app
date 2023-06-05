@@ -2,8 +2,8 @@ import { FC } from "react";
 import clsx from "clsx";
 
 interface CardProps {
-  children: any;
-  className: any;
+  children?: any;
+  className?: any;
 }
 
 const Card: FC<CardProps> = ({ className, children }) => {

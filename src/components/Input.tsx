@@ -2,8 +2,8 @@ import { FC } from "react";
 import clsx from "clsx";
 
 interface InputProps {
-  children: any;
-  className: any;
+  children?: any;
+  className?: any;
 }
 
 const Input: FC<InputProps> = ({ className, ...props }) => {
