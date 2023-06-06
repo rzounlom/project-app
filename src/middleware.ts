@@ -4,7 +4,7 @@ import { jwtVerify } from "jose";
 
 const PUBLIC_FILE = /\.(.*)$/;
 
-const verifyJWT = async (jwt: any) => {
+const verifyJWT = async (jwt: string | Uint8Array) => {
   const { payload } = await jwtVerify(
     jwt,
     new TextEncoder().encode(process.env.JWT_SECRET)
@@ -28,10 +28,9 @@ export default async function middleware(req: NextRequest, res: NextResponse) {
 
   const jwt = req.cookies.get(process.env.COOKIE_NAME!!);
 
-  console.log(jwt);
+  // console.log(jwt);
 
   if (!jwt) {
-    console.log({ jwt, cookieName: process.env.COOKIE_NAME });
     req.nextUrl.pathname = "/signin";
     return NextResponse.redirect(req.nextUrl);
   }
