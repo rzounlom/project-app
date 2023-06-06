@@ -12,7 +12,7 @@ const getData = async () => {
 
 const Greetings = async () => {
   const user = await getData();
-  console.log({ user });
+  // console.log({ user });
 
   return (
     <Card className="w-full py-4 relative">

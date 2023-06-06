@@ -39,7 +39,7 @@ export default async function middleware(req: NextRequest, res: NextResponse) {
     await verifyJWT(jwt.value);
     return NextResponse.next();
   } catch (e) {
-    console.log("EDGE ERROR", e);
+    // console.log("EDGE ERROR", e);
     req.nextUrl.pathname = "/signin";
     return NextResponse.redirect(req.nextUrl);
   }
